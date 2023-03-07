@@ -9,7 +9,6 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Value;
 
 public class server extends Thread {
 
