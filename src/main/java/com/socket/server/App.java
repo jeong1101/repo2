@@ -8,7 +8,7 @@ public class App {
 	
 
 	private static final int PORT_NUMBER = 4432;
-	//private static final Logger logger = Logger.getLogger(App.class);
+
 	public static void main(String[] args) throws IOException, Exception{
 		
 		System.out.println(":::                                                :::");

@@ -8,12 +8,9 @@ import java.net.Socket;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.apache.log4j.Logger;
 
 public class server extends Thread {
 
-	private static final Logger logger = Logger.getLogger(server.class);
-	
 	private Socket socket;
 	public server (Socket socket) {
 		this.socket=socket;
@@ -42,20 +39,20 @@ public class server extends Thread {
 				//클라이언트에 문자열 전송
 				pw.println("--- 수신 완료 ---");
 				pw.flush();
-				
+
 				//로그 출력
-				logger.info("[From "+ connDSERVER_Ip + "] " +now + " " +uuid);
+				System.out.println("[From "+ connDSERVER_Ip + "] " +now + " " +uuid);
 				
 			}catch (IOException e) {
 				// TODO: handle exception
-				logger.error(e);
+				System.out.println(e);
 			}finally {
 				try {
 					if(pw!=null) {pw.close();}
 					if(br!=null) {br.close();}
 					if(socket != null) {socket.close();}
 				}catch (IOException e) {
-					logger.error(e);
+					System.out.println(e);
 					
 				}	
 
