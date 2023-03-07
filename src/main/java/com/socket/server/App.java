@@ -9,12 +9,12 @@ public class App {
 	
 
 	private static final int PORT_NUMBER = 4432;
-	private static final Logger logger = Logger.getLogger(App.class);
+//	private static final Logger logger = Logger.getLogger(App.class);
 	public static void main(String[] args) throws IOException, Exception{
 		
-		logger.info(":::                                                :::");
-		logger.info(":::       Socket Application  Process Start        :::");
-		logger.info(":::                                                :::");
+//		logger.info(":::                                                :::");
+//		logger.info(":::       Socket Application  Process Start        :::");
+//		logger.info(":::                                                :::");
 		
 		try(ServerSocket sv = new ServerSocket(PORT_NUMBER)){
 			while(true) {
@@ -23,7 +23,7 @@ public class App {
 				task.start();			
 			}
 		} catch (IOException e) {
-			logger.error(e);	
+			//logger.error(e);	
 		}
 				
 	/*      while(true){		// 무한반복
